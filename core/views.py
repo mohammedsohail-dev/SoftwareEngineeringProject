@@ -192,6 +192,9 @@ def validate(request):
         response.set_cookie('email',email)
         response.set_cookie('robot_id',users.robot_id(email))
         return response
+    else:
+        response = HttpResponseRedirect("/")
+        return response
         
 
 def account(request):
